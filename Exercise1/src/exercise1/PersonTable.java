@@ -33,27 +33,12 @@ public class PersonTable {
 		return personTable;
 	}
 	
-	
-	
 	public String toString(){
 		String stringTable;
 		stringTable = personTable.toString();
 		return stringTable;
 	}
-	
-	/*public String toHTML(){
-		String htmlString = "<p>";
-		String brand;
-		String model;
-		for(int i = 0; i < carTable.size(); i++){
-			brand = carTable.get(i).getBrand();
-			model = carTable.get(i).getModel();
-			htmlString = htmlString + brand + " " + model + "; ";
-		}
-		htmlString = htmlString + "</p>";
-		return htmlString;
-	}*/
-	
+
 	public void closeDb() {
 		try {
 			db.Close();

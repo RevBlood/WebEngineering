@@ -14,23 +14,37 @@ public class WorkTable {
 	public WorkTable(String firstName) throws SQLException{
 		db = new DBAccess();
 		String type = "";
+		boolean musician = false;
+		boolean actor = false;
 		Statement statement = db.connection.createStatement();
+		ResultSet result = null;
+		works = new ArrayList<String>();
+		
 		ResultSet typeOfPerson = statement.executeQuery("SELECT \"postgres\".\"Person\".\"Type\" FROM \"postgres\".\"Person\" WHERE \"postgres\".\"Person\".\"FirstName\" =  '" + firstName + "'  ");
 		while (typeOfPerson.next()) {
+			
 			type = typeOfPerson.getString("Type");
+			if(type.equals("Musician")) {
+				musician = true;
+			} else {
+				actor = true;
+			}
+		
 		}
 		
-		if(type.equals("Musician")) {
-			type = "Album";
-		} else {
-			type = "Movie";
+		if (musician) {
+			result = statement.executeQuery("SELECT \"postgres\".\"Album\".\"Name\" FROM \"postgres\".\"Person\" JOIN \"postgres\".\"Album\" ON \"Person\".\"Id\"=\"Album\".\"Id\" WHERE \"Person\".\"FirstName\" =  '" + firstName + "'  ");
+			
+			while (result.next()) {
+				works.add(result.getString("Name"));
+			}
 		}
-		
-		ResultSet set = statement.executeQuery("SELECT \"postgres\".\"" + type + "\".\"Name\" FROM \"postgres\".\"Person\" JOIN \"postgres\".\"" + type + "\" ON \"Person\".\"Id\"=\"" + type + "\".\"Id\" WHERE \"Person\".\"FirstName\" =  '" + firstName + "'  ");
-		
-		works = new ArrayList<String>();
-		while (set.next()) {
-			works.add(set.getString("Name"));
+
+		if (actor) {
+			result = statement.executeQuery("SELECT \"postgres\".\"Movie\".\"Name\" FROM \"postgres\".\"Person\" JOIN \"postgres\".\"Movie\" ON \"Person\".\"Id\"=\"Movie\".\"Id\" WHERE \"Person\".\"FirstName\" =  '" + firstName + "'  ");
+			while (result.next()) {
+				works.add(result.getString("Name"));
+			}
 		}
 	}
 	

@@ -14,7 +14,6 @@
 XMLTable table = new XMLTable();
 String result = table.getTableAsHTML();
 out.print(result);
-
 %>
 
 
