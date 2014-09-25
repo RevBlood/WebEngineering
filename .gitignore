@@ -1,2 +1,5 @@
 #Ignore the build directory
 /Exercise1/build
+.metadata
+/Servers
+/Exercise1/bin
