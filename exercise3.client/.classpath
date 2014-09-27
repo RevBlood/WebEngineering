@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_20"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/jersey-bundle-1.17.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/postgresql-9.3-1102.jdbc41.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

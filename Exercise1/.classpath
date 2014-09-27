@@ -13,5 +13,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/postgresql-9.3-1102.jdbc41.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/jersey-bundle-1.17.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Casper/Documents/sw7_webengineering/Exercise1/WebContent/WEB-INF/lib/jsr311-api-1.1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
